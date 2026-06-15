@@ -2,40 +2,39 @@ package com.ing.zoo;
 
 import java.util.Random;
 
-public class Zebra {
+public class Monkey {
     public String name;
     public String helloText;
     public String eatText;
     public String trick;
 
-    public Zebra()
+    public Monkey()
     {
     }
 
     public void sayHello()
     {
-        helloText = "zebra zebra";
+        helloText = "oe oe aah aah";
         System.out.println(helloText);
     }
 
-    public void eatLeaves()
+    public void eatBanana()
     {
-        eatText = "munch munch zank yee bra";
+        eatText = "nomnomnom, I love bananas!";
         System.out.println(eatText);
     }
 
-    public void performTrick()
-    {
+    public void performTrick(){
         Random random = new Random();
         int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "jumps over a river";
+        if(rnd == 0) {
+            trick = "swings from tree to tree";
         }
         else
         {
-            trick = "runs in circles";
+            trick = "does a backflip";
         }
         System.out.println(trick);
+
     }
 }
