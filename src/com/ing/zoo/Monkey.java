@@ -1,10 +1,15 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.TrickPerformer;
+
 import java.util.Random;
 
-public class Monkey {
-    public String name;
-    public String helloText;
+/**
+ * I added this new class. It extends the Animal superclass and implements the TrickPerformer
+ * interface to provide trick behavior. The monkey also has its own
+ * banana‑eating method unique to this species.
+ */
+public class Monkey extends Animal implements TrickPerformer {
     public String eatText;
     public String trick;
 

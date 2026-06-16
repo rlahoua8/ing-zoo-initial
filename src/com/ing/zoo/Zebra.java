@@ -1,10 +1,17 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.Herbivore;
+import com.ing.zoo.interfaces.TrickPerformer;
+
 import java.util.Random;
 
-public class Zebra {
-    public String name;
-    public String helloText;
+/**
+ * The Zebra class represents a zebra in the zoo.
+ * It extends the Animal superclass and implements the Herbivore
+ * and TrickPerformer interfaces, allowing it to eat plants and
+ * perform simple tricks.
+ */
+public class Zebra extends Animal implements Herbivore, TrickPerformer {
     public String eatText;
     public String trick;
 

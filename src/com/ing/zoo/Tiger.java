@@ -1,10 +1,16 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.Carnivore;
+import com.ing.zoo.interfaces.TrickPerformer;
+
 import java.util.Random;
 
-public class Tiger {
-    public String name;
-    public String helloText;
+/**
+ * This class extends the Animal superclass and implements the Carnivore
+ * and TrickPerformer interfaces, allowing it to eat meat and
+ * perform simple tricks.
+ */
+public class Tiger extends Animal implements Carnivore, TrickPerformer {
     public String eatText;
     public String trick;
 

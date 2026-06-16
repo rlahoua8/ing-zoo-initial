@@ -1,10 +1,17 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.Carnivore;
+import com.ing.zoo.interfaces.Herbivore;
+import com.ing.zoo.interfaces.TrickPerformer;
+
 import java.util.Random;
 
-public class Pig {
-    public String name;
-    public String helloText;
+/**
+ * This class extends the Animal superclass and implements Carnivore,
+ * Herbivore, and TrickPerformer, meaning pigs can eat both plants
+ * and meat, and can perform simple tricks.
+ */
+public class Pig extends Animal implements Carnivore, Herbivore, TrickPerformer {
     public String eatText;
     public String trick;
 
@@ -14,7 +21,7 @@ public class Pig {
 
     public void sayHello()
     {
-        helloText = "splash";
+        helloText = "oink oink";
         System.out.println(helloText);
     }
 

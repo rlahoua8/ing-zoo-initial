@@ -1,8 +1,12 @@
 package com.ing.zoo;
 
-public class Lion {
-    public String name;
-    public String helloText;
+import com.ing.zoo.interfaces.Carnivore;
+
+/**
+ * This class extends the Animal superclass to inherit shared fields
+ * and implements the Carnivore interface to define meat eating behavior.
+ */
+public class Lion extends Animal implements Carnivore {
     public String eatText;
 
     public Lion()

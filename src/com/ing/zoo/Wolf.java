@@ -1,8 +1,12 @@
 package com.ing.zoo;
 
-public class Wolf {
-    public String name;
-    public String helloText;
+import com.ing.zoo.interfaces.Carnivore;
+
+/**
+ * I added this new class. It extends the Animal superclass and implements the Carnivore
+ * interface to define meat‑eating behavior.
+ */
+public class Wolf extends Animal implements Carnivore {
     public String eatText;
 
     public Wolf()
