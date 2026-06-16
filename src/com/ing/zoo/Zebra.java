@@ -12,11 +12,11 @@ import java.util.Random;
  * perform simple tricks.
  */
 public class Zebra extends Animal implements Herbivore, TrickPerformer {
-    public String eatText;
-    public String trick;
 
-    public Zebra()
+    // Constructor that forwards the given name to the Animal superclass
+    public Zebra(String animalName)
     {
+        super(animalName);
     }
 
     public void sayHello()
@@ -27,8 +27,7 @@ public class Zebra extends Animal implements Herbivore, TrickPerformer {
 
     public void eatLeaves()
     {
-        eatText = "munch munch zank yee bra";
-        System.out.println(eatText);
+        System.out.println("munch munch zank yee bra");
     }
 
     public void performTrick()
@@ -37,12 +36,11 @@ public class Zebra extends Animal implements Herbivore, TrickPerformer {
         int rnd = random.nextInt(2);
         if(rnd == 0)
         {
-            trick = "jumps over a river";
+            System.out.println("jumps over a river");
         }
         else
         {
-            trick = "runs in circles";
+            System.out.println("runs in circles");
         }
-        System.out.println(trick);
     }
 }

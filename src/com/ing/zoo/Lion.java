@@ -7,10 +7,10 @@ import com.ing.zoo.interfaces.Carnivore;
  * and implements the Carnivore interface to define meat eating behavior.
  */
 public class Lion extends Animal implements Carnivore {
-    public String eatText;
-
-    public Lion()
+    // Constructor that forwards the given name to the Animal superclass
+    public Lion(String animalName)
     {
+        super(animalName);
     }
 
     public void sayHello()
@@ -21,7 +21,6 @@ public class Lion extends Animal implements Carnivore {
 
     public void eatMeat()
     {
-        eatText = "nomnomnom thx mate";
-        System.out.println(eatText);
+        System.out.println("nomnomnom thx mate");
     }
 }

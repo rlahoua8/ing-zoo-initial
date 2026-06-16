@@ -11,11 +11,10 @@ import java.util.Random;
  * perform simple tricks.
  */
 public class Tiger extends Animal implements Carnivore, TrickPerformer {
-    public String eatText;
-    public String trick;
-
-    public Tiger()
+    // Constructor that forwards the given name to the Animal superclass
+    public Tiger(String animalName)
     {
+        super(animalName);
     }
 
     public void sayHello()
@@ -26,8 +25,7 @@ public class Tiger extends Animal implements Carnivore, TrickPerformer {
 
     public void eatMeat()
     {
-        eatText = "nomnomnom oink wubalubadubdub";
-        System.out.println(eatText);
+        System.out.println("nomnomnom oink wubalubadubdub");
     }
 
     public void performTrick()
@@ -36,12 +34,11 @@ public class Tiger extends Animal implements Carnivore, TrickPerformer {
         int rnd = random.nextInt(2);
         if(rnd == 0)
         {
-            trick = "jumps in tree";
+            System.out.println("jumps in tree");
         }
         else
         {
-            trick = "scratches ears";
+            System.out.println("scratches ears");
         }
-        System.out.println(trick);
     }
 }

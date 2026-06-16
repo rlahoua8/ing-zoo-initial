@@ -8,10 +8,10 @@ import com.ing.zoo.interfaces.Herbivore;
  * interface to define plant-eating behavior.
  */
 public class Hippo extends Animal implements Herbivore {
-    public String eatText;
-
-    public Hippo()
+    // Constructor that forwards the given name to the Animal superclass
+    public Hippo(String animalName)
     {
+        super(animalName);
     }
 
     public void sayHello()
@@ -22,7 +22,6 @@ public class Hippo extends Animal implements Herbivore {
 
     public void eatLeaves()
     {
-        eatText = "munch munch lovely";
-        System.out.println(eatText);
+        System.out.println("munch munch lovely");
     }
 }

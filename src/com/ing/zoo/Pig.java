@@ -12,29 +12,25 @@ import java.util.Random;
  * and meat, and can perform simple tricks.
  */
 public class Pig extends Animal implements Carnivore, Herbivore, TrickPerformer {
-    public String eatText;
-    public String trick;
-
-    public Pig()
+    // Constructor that forwards the given name to the Animal superclass
+    public Pig(String animalName)
     {
+        super(animalName);
     }
 
     public void sayHello()
     {
-        helloText = "oink oink";
-        System.out.println(helloText);
+        System.out.println("oink oink");
     }
 
     public void eatLeaves()
     {
-        eatText = "munch munch oink";
-        System.out.println(eatText);
+        System.out.println("munch munch oink");
     }
 
     public void eatMeat()
     {
-        eatText = "nomnomnom oink thx";
-        System.out.println(eatText);
+        System.out.println("nomnomnom oink thx");
     }
 
     public void performTrick()
@@ -43,12 +39,11 @@ public class Pig extends Animal implements Carnivore, Herbivore, TrickPerformer 
         int rnd = random.nextInt(2);
         if(rnd == 0)
         {
-            trick = "rolls in the mud";
+            System.out.println("rolls in the mud");
         }
         else
         {
-            trick = "runs in circles";
+            System.out.println("runs in circles");
         }
-        System.out.println(trick);
     }
 }

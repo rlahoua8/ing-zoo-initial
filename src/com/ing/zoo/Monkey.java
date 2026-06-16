@@ -1,5 +1,6 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.Herbivore;
 import com.ing.zoo.interfaces.TrickPerformer;
 
 import java.util.Random;
@@ -9,12 +10,11 @@ import java.util.Random;
  * interface to provide trick behavior. The monkey also has its own
  * banana‑eating method unique to this species.
  */
-public class Monkey extends Animal implements TrickPerformer {
-    public String eatText;
-    public String trick;
-
-    public Monkey()
+public class Monkey extends Animal implements TrickPerformer, Herbivore {
+    // Constructor that forwards the given name to the Animal superclass
+    public Monkey(String animalName)
     {
+        super(animalName);
     }
 
     public void sayHello()
@@ -23,23 +23,22 @@ public class Monkey extends Animal implements TrickPerformer {
         System.out.println(helloText);
     }
 
-    public void eatBanana()
+    public void eatLeaves()
     {
-        eatText = "nomnomnom, I love bananas!";
-        System.out.println(eatText);
+        System.out.println("No thanks, I want bananas!");
     }
 
     public void performTrick(){
         Random random = new Random();
         int rnd = random.nextInt(2);
+
         if(rnd == 0) {
-            trick = "swings from tree to tree";
+            System.out.println("Swings from tree to tree");
         }
         else
         {
-            trick = "does a backflip";
+            System.out.println("Does a backflip");
         }
-        System.out.println(trick);
 
     }
 }

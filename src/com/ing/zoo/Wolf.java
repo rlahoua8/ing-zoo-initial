@@ -9,8 +9,10 @@ import com.ing.zoo.interfaces.Carnivore;
 public class Wolf extends Animal implements Carnivore {
     public String eatText;
 
-    public Wolf()
+    // Constructor that forwards the given name to the Animal superclass
+    public Wolf(String animalName)
     {
+        super(animalName);
     }
 
     public void sayHello()
@@ -21,7 +23,6 @@ public class Wolf extends Animal implements Carnivore {
 
     public void eatMeat()
     {
-        eatText = "nomnomnom, I want more!";
-        System.out.println(eatText);
+        System.out.println("nomnomnom, I want more!");
     }
 }
